@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-from discord import app_commands
+from discord import slash_command
 from dotenv import load_dotenv
 import os
 
@@ -22,7 +22,7 @@ GUILD_ID = int(os.getenv("GUILD_ID"))  # Replace with your guild ID
 
 intents=discord.Intents.default()
 intents.message_content = True  # Enable message content intent
-bot = commands.Bot(command_prefix='!', intents=intents)
+bot = commands.Bot(command_prefix='?', intents=intents)
 
 # load all cogs
 @bot.event
