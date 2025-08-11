@@ -40,10 +40,10 @@ async def on_ready():
 
     for filename in os.listdir("./cogs"):
         if filename.endswith(".py"):
-            await bot.load_extensions(f"cogs.{filename[:-3]}")
+            await bot.load_extension(f"cogs.{filename[:-3]}")
 
 @bot.command()
-async def on_message(self, message: discord.Message):
+async def on_message(message: discord.Message):
     if message.author == bot.user:
         return
 
